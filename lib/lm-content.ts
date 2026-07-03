@@ -1,13 +1,18 @@
 import { Calculator, CreditCard, Gift, MapPin, ClipboardList, Shield,
-         Home, Key, FileText, TrendingUp, Users, Heart } from 'lucide-react'
+         Home, Key, FileText, TrendingUp, Users, Heart,
+         Ruler, BadgeCheck, PiggyBank } from 'lucide-react'
 import type { FormIntent } from './form-contracts'
-import guiaHispanas from '@/content/guia-para-familias-hispanas/content.json'
+import guiaHispanas from '@/content/adriana/guia-para-familias-hispanas/content.json'
+import primeraCasaHamptonRoads from '@/content/melany/your-first-home-hampton-roads/content.json'
+import guiaBrasileiras from '@/content/viviane/guia-para-familias-brasileiras/content.json'
+import pcsPlaybook from '@/content/john/pcs-homebuyers-playbook/content.json'
 
 // ─── Icon map (used by Benefits template) ────────────────────────────────────
 
 export const BENEFIT_ICONS = {
   Calculator, CreditCard, Gift, MapPin, ClipboardList, Shield,
   Home, Key, FileText, TrendingUp, Users, Heart,
+  Ruler, BadgeCheck, PiggyBank,
 } as const
 
 export type BenefitIconName = keyof typeof BENEFIT_ICONS
@@ -81,19 +86,14 @@ export interface LMContent {
   }
 
   ctaFinal: {
-    title:           string
-    paragraph:       string
-    ctaText:         string
-    whatsappUrl:     string
-    whatsappLinkText: string
+    title:     string
+    paragraph: string
+    ctaText:   string
   }
 
   footer: {
-    logo: string
-    nav:  Array<{ label: string; href: string }>
-    social: Array<{ type: 'instagram' | 'facebook' | 'whatsapp'; href: string }>
-    contact: { phone: string; phoneHref: string; email: string }
-    legalLine: string
+    logo:    string
+    contact: { email: string }
   }
 
   quizSuccess: {
@@ -162,6 +162,9 @@ function buildContentMap(rawItems: unknown[]): Record<string, LMContent> {
 // To add a new LM: add one import + one entry in this array. No other file changes.
 export const LM_CONTENT: Record<string, LMContent> = buildContentMap([
   guiaHispanas,
+  primeraCasaHamptonRoads,
+  guiaBrasileiras,
+  pcsPlaybook,
 ])
 
 export function getLMContent(slug: string): LMContent | undefined {

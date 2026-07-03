@@ -1,0 +1,154 @@
+{
+  "slug": "pcs-homebuyers-playbook",
+  "channelPublicId": "chn_dmbgox9d0t6r",
+  "intent": "compra",
+
+  "meta": {
+    "title": "The PCS Homebuyer's Playbook — Free Guide for Military Families | Hampton Roads, VA & NC",
+    "description": "Free step-by-step guide for military families buying a home during a PCS to Hampton Roads. Turn your BAH into buying power, use your VA loan the right way ($0 down, no PMI), and choose the right neighborhood. Built by John Leonard, active-duty U.S. Marine and agent with A&J Real Estate Group.",
+    "keywords": [
+      "PCS homebuying Hampton Roads",
+      "VA loan Virginia military",
+      "buying a home with BAH",
+      "military relocation Norfolk",
+      "Naval Station Norfolk homes",
+      "first time military homebuyer guide",
+      "Virginia Beach",
+      "Chesapeake",
+      "Suffolk"
+    ],
+    "ogImage": "/images/og-image.jpg",
+    "locale": "en_US"
+  },
+
+  "hero": {
+    "badge": "Free Guide · Hampton Roads, VA & NC",
+    "titleLine1": "From PCS Orders",
+    "titleLine2": "to Your Front Door",
+    "subheadline": "A set of orders just changed everything — a report date, a moving clock, and a hundred decisions pulling at you at once. Take a breath. This free playbook hands military families the entire game plan, in plain English, with no guesswork and no surprises.",
+    "bullets": [
+      "Turn your BAH into real buying power — and stop paying down someone else's mortgage",
+      "Use your VA loan the right way: $0 down, no PMI, and none of the rookie mistakes",
+      "The Hampton Roads neighborhoods that actually fit your commute, schools, and budget",
+      "A week-by-week timeline built for a 60–90 day move — so nothing catches you off guard"
+    ],
+    "ctaText": "Get my free playbook →",
+    "microcopy": "100% free · Built for military families · No obligation",
+    "images": {
+      "background": "/lm/john/pcs-homebuyers-playbook/John_Hero_Background_2.webp",
+      "portrait": "/lm/john/pcs-homebuyers-playbook/john_hero.webp",
+      "guideCover": "/lm/john/pcs-homebuyers-playbook/guide-cover-2.webp",
+      "guideCoverAlt": "The PCS Homebuyer's Playbook — cover"
+    }
+  },
+
+  "benefits": {
+    "label": "What's inside the playbook",
+    "title": "Everything no one explains about buying during a PCS — laid out step by step",
+    "subtitle": "John Leonard built this playbook from experience most agents simply don't have — as an active-duty U.S. Marine who has made the move himself, and who now helps fellow military families land in Hampton Roads without the stress.",
+    "cards": [
+      {
+        "icon": "Calculator",
+        "title": "What can you really afford?",
+        "desc": "Turn your BAH into a clear monthly number — with taxes, insurance, and every real cost — before you ever fall for a listing."
+      },
+      {
+        "icon": "BadgeCheck",
+        "title": "Your VA loan, done right",
+        "desc": "$0 down, no PMI, and reusable at every PCS. How to use the benefit you earned without the costly first-timer mistakes."
+      },
+      {
+        "icon": "PiggyBank",
+        "title": "Keep more money at the table",
+        "desc": "How the 2026 VA funding fee works, who's fully exempt, and how to get the seller to cover it — so you keep cash where it counts."
+      },
+      {
+        "icon": "MapPin",
+        "title": "The right neighborhood for your family",
+        "desc": "Norfolk, Virginia Beach, Chesapeake, Suffolk and more — which one fits your commute, your schools, and your budget (and why the tunnels change everything)."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "The whole move, week by week",
+        "desc": "From orders to keys in 60–90 days — a timeline that keeps you ahead of the clock, even when you're buying from across the country."
+      },
+      {
+        "icon": "Shield",
+        "title": "Buy from a distance, safely",
+        "desc": "How to buy a home you haven't stood in — live video tours, inspections, and the red flags you should never ignore."
+      }
+    ]
+  },
+
+  "quizSection": {
+    "label": "Get your free playbook",
+    "title": "Tell us a bit about your move and get the playbook now",
+    "subtitle": "It takes less than 2 minutes. We'll send the playbook right away — and if you have questions, John can walk you through it, one Marine's family to another, with zero pressure.",
+    "contactHeading": "Where should we send your playbook?"
+  },
+
+  "agentIntro": {
+    "label": "Who put this together",
+    "name": "John Leonard",
+    "title": "Real Estate Agent & Active-Duty U.S. Marine · A&J Real Estate Group",
+    "paragraphs": [
+      "Here's why I can help: I'm an active-duty U.S. Marine. I haven't just studied the PCS process — I've lived it. The orders, the clock, the BAH math, the scramble to find a home from three states away. I know exactly what your family is walking into, because I've walked into it myself.",
+      "I've helped fellow service members and their families land in Hampton Roads without the stress — first-time buyers on a tight budget, families PCSing under a moving clock, and folks who assumed buying just wasn't for them. I'll walk you through every step, at your pace, no pressure."
+    ],
+    "quote": "I've made this move myself. My mission is to make yours easier — with straight answers, real local knowledge, and someone who has your six.",
+    "photo": "/lm/john/pcs-homebuyers-playbook/john_bio.webp",
+    "whatsappUrl": "https://wa.me/18456719359",
+    "instagramUrl": "https://instagram.com/soldby_jleonard",
+    "instagramHandle": "@soldby_jleonard"
+  },
+
+  "testimonials": {
+    "label": "Families who already have their keys",
+    "title": "They thought buying was complicated too",
+    "items": [
+      {
+        "image": "/lm/john/pcs-homebuyers-playbook/testimonials/T_1.webp",
+        "name": "SSgt. Marcus T.",
+        "location": "Virginia Beach · Townhouse",
+        "quote": "John gets it because he's LIVED it. We were PCS'ing with two weeks notice and I thought we were toast. He had our BAH numbers, our VA loan sorted, and a house lined up before we even landed. Semper fi for real"
+      },
+      {
+        "image": "/lm/john/pcs-homebuyers-playbook/testimonials/T_2.webp",
+        "name": "The Ortegas",
+        "location": "Virginia Beach · House",
+        "quote": "I was so tired of agents who didn't know what BAH even stood for. John just... knew. Knew the tunnels, knew the schools, knew exactly what our paycheck could actually do. Felt like talking to a buddy, not a salesman"
+      },
+      {
+        "image": "/lm/john/pcs-homebuyers-playbook/testimonials/T_3.webp",
+        "name": "Cpl. Danielle R. & family",
+        "location": "Virginia Beach · Family Home",
+        "quote": "We've PCS'd three times and this was hands down the easiest one. John made us feel like our family actually mattered, not just the sale. Our kids are already obsessed with the backyard. Can't thank him enough"
+      }
+    ]
+  },
+
+  "ctaFinal": {
+    "title": "This playbook is yours — free, today.",
+    "paragraph": "Whether you're just starting to explore or you're ready to move, the playbook is your first step. The next one is yours to take — and I'll be here when you're ready.",
+    "ctaText": "Get my free playbook →"
+  },
+
+  "footer": {
+    "logo": "/images/logo-white_2.webp",
+    "contact": {
+      "email": "soldbyjleonard@gmail.com"
+    }
+  },
+
+  "quizSuccess": {
+    "createdHeading":      "You're all set — your playbook is on its way.",
+    "createdBody":         "Prefer to talk it through? Message John directly on WhatsApp at",
+    "createdWhatsappUrl":  "https://wa.me/18456719359",
+    "createdWhatsappLabel": "(845) 671-9359",
+    "alreadyHeading":      "We already sent you the playbook",
+    "alreadyBody":         "We checked our records and already sent the guide to this email. If you can't find it, take a quick look in your spam or junk folder.",
+    "alreadyPhoneIntro":   "Need a hand? Call us at",
+    "alreadyPhone":        "+18456719359",
+    "alreadyPhoneLabel":   "(845) 671-9359"
+  }
+}

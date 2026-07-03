@@ -1,14 +1,18 @@
 'use client'
 import { motion, useReducedMotion } from 'framer-motion'
+import { QUIZ_UI, type Lang } from '@/lib/quiz-data'
 
 interface QuizProgressProps {
   step:  number
   total: number
+  lang:  Lang
 }
 
-export function QuizProgress({ step, total }: QuizProgressProps) {
+export function QuizProgress({ step, total, lang }: QuizProgressProps) {
   const pref = useReducedMotion()
   const pct  = ((step + 1) / total) * 100
+  const ui   = QUIZ_UI[lang]
+  const label = `${ui.stepWord} ${step + 1} ${ui.ofWord} ${total}`
 
   return (
     <div className="mb-8">
@@ -19,7 +23,7 @@ export function QuizProgress({ step, total }: QuizProgressProps) {
         aria-valuenow={step + 1}
         aria-valuemin={1}
         aria-valuemax={total}
-        aria-label={`Paso ${step + 1} de ${total}`}
+        aria-label={label}
         style={{ backgroundColor: 'rgba(199,162,96,0.20)' }}
       >
         <motion.div
@@ -32,7 +36,7 @@ export function QuizProgress({ step, total }: QuizProgressProps) {
 
       {/* Step label */}
       <p className="font-body font-semibold text-opaque text-sm mt-3">
-        Paso {step + 1} de {total}
+        {label}
       </p>
     </div>
   )

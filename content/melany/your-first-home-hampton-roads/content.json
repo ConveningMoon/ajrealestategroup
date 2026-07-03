@@ -1,0 +1,154 @@
+{
+  "slug": "your-first-home-hampton-roads",
+  "channelPublicId": "chn_938cbgihmduj",
+  "intent": "compra",
+
+  "meta": {
+    "title": "Your First Home in Hampton Roads — Free 2026 First-Time Buyer's Guide for Families | Virginia",
+    "description": "Download the free step-by-step guide to buying your first home in Hampton Roads, Virginia. Down-payment grants from Virginia Housing, local city assistance programs, loan options from 0% down, and the whole process explained in plain language. Prepared by Melany Valencia, A&J Real Estate Group.",
+    "keywords": [
+      "first time home buyer Hampton Roads",
+      "buy a house Virginia Beach",
+      "Virginia Housing down payment assistance",
+      "Norfolk first time buyer grants",
+      "Chesapeake homebuyer program",
+      "Suffolk down payment help",
+      "VA loan military Hampton Roads",
+      "first home guide Virginia",
+      "bilingual real estate agent Virginia"
+    ],
+    "ogImage": "/images/og-image.jpg",
+    "locale": "en_US"
+  },
+
+  "hero": {
+    "badge": "Free Guide · Hampton Roads, Virginia",
+    "titleLine1": "Your First Home in",
+    "titleLine2": "Hampton Roads",
+    "subheadline": "If your family is dreaming of a first home but the process feels overwhelming, this guide is for you. Every step explained in plain language — no jargon, no pressure, no surprises.",
+    "bullets": [
+      "Down-payment grants in Virginia that you never pay back — who qualifies and how",
+      "How to buy with as little as 0–3.5% down (yes, even as a first-timer)",
+      "Which Hampton Roads neighborhoods fit your family — schools, safety, and commute",
+      "The costly first-time mistakes to avoid — including the wire-fraud trap"
+    ],
+    "ctaText": "Send me the free guide →",
+    "microcopy": "100% free · Step-by-step · No obligation",
+    "images": {
+      "background": "/lm/melany/your-first-home-hampton-roads/Melany_Hero_Background.webp",
+      "portrait": "/lm/melany/your-first-home-hampton-roads/melany_hero.webp",
+      "guideCover": "/lm/melany/your-first-home-hampton-roads/guide-cover.webp",
+      "guideCoverAlt": "Your First Home in Hampton Roads — 2026 First-Time Buyer's Guide cover"
+    }
+  },
+
+  "benefits": {
+    "label": "What's inside this guide",
+    "title": "Everything no one explains — now step-by-step, for your family",
+    "subtitle": "Melany Valencia built this guide on current, verified 2026 data for Hampton Roads and hands-on guidance for the families she serves — first-time buyers on a real budget, military families in the middle of a move, and growing households who thought owning a home was still years away.",
+    "cards": [
+      {
+        "icon": "Calculator",
+        "title": "What can you actually afford?",
+        "desc": "Understand your real monthly payment — with taxes, insurance, and every cost — before you fall in love with a home."
+      },
+      {
+        "icon": "Gift",
+        "title": "Grants you never pay back",
+        "desc": "Virginia Housing gives first-time buyers 2–2.5% of the price as a true grant, and local cities offer $40K+ in help. We show you how to qualify."
+      },
+      {
+        "icon": "CreditCard",
+        "title": "You don't need 20% down",
+        "desc": "Conventional from 3%, FHA from 3.5%, VA at 0% for military families, USDA at 0% in eligible areas — the right loan for your situation."
+      },
+      {
+        "icon": "MapPin",
+        "title": "The right neighborhood for your family",
+        "desc": "Virginia Beach, Chesapeake, Norfolk, Suffolk and more — which fits your family based on schools, safety, commute, and flood zones."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "The whole process, step by step",
+        "desc": "From pre-approval to the day you get the keys — with a printable checklist so nothing catches you off guard."
+      },
+      {
+        "icon": "Shield",
+        "title": "Protect yourself from costly mistakes",
+        "desc": "The 7 traps first-time buyers fall into — including wire-transfer fraud — and exactly how to spot them in time."
+      }
+    ]
+  },
+
+  "quizSection": {
+    "label": "Download your free guide",
+    "title": "Tell us a little about you and get the guide now",
+    "subtitle": "It takes less than 2 minutes. We'll send the guide right away — and if you have questions, Melany can walk you through everything in English or Spanish, with zero pressure.",
+    "contactHeading": "Where should we send your guide?"
+  },
+
+  "agentIntro": {
+    "label": "Who prepared this guide",
+    "name": "Melany Valencia",
+    "title": "Bilingual real estate advisor · A&J Real Estate Group",
+    "paragraphs": [
+      "I'm a bilingual real estate advisor with A&J Real Estate Group — and a first-time mom myself. So I know what it feels like to make a big decision for the people you love while juggling a hundred other things. I help families across Virginia and North Carolina find their first home with less stress and more clarity.",
+      "I've guided first-time buyers on a tight budget, military families in the middle of a move, and growing households who thought owning wasn't for them — patiently, in plain language, in English or Spanish. No rushing, no pressure."
+    ],
+    "quote": "Buying our first home changed everything for my family. My mission is to help yours do the same — with honesty, patience, and in your language.",
+    "photo": "/lm/melany/your-first-home-hampton-roads/melany_bio.webp",
+    "whatsappUrl": "https://wa.me/13218880712",
+    "instagramUrl": "https://instagram.com/soldbymelany757",
+    "instagramHandle": "@soldbymelany757"
+  },
+
+  "testimonials": {
+    "label": "Families who already have their keys",
+    "title": "They thought buying was complicated too",
+    "items": [
+      {
+        "image": "/lm/melany/your-first-home-hampton-roads/testimonials/T_1.webp",
+        "name": "The Hendersons, first-time buyers",
+        "location": "Virginia Beach · Single-family",
+        "quote": "We were SO nervous, like 'can two people with student loans actually buy a house?' Melany just... made it make sense. No judgment, no rushing us, just real talk. We cried a little when we got the keys, not gonna lie"
+      },
+      {
+        "image": "/lm/melany/your-first-home-hampton-roads/testimonials/T_2.webp",
+        "name": "Priya & Sam",
+        "location": "Virginia Beach · Townhouse",
+        "quote": "Honestly I thought buying a house meant getting yelled at by a bank for two months. Melany was the opposite of that. She texted us memes during the boring paperwork parts lol. But she also fought hard for us when it mattered. 10/10"
+      },
+      {
+        "image": "/lm/melany/your-first-home-hampton-roads/testimonials/T_3.webp",
+        "name": "The Colemans",
+        "location": "Norfolk · Military VA loan",
+        "quote": "Our kids have a backyard now. A BACKYARD. I still can't believe it. Melany found us something we didn't even know we could afford and walked us through literally every scary word on every form. She's family now, not our realtor"
+      }
+    ]
+  },
+
+  "ctaFinal": {
+    "title": "This guide is yours, free, today.",
+    "paragraph": "Whether you're just starting to explore or you're ready to begin, the guide is the first step — and the next one is yours to take.",
+    "ctaText": "I want my free guide →"
+  },
+
+  "footer": {
+    "logo": "/images/logo-white_2.webp",
+    "contact": {
+      "email": "soldbymelany757@gmail.com"
+    }
+  },
+
+  "quizSuccess": {
+    "createdHeading":       "You're all set! Your guide is on its way.",
+    "createdBody":          "Prefer to talk directly? Message Melany on WhatsApp at",
+    "createdWhatsappUrl":   "https://wa.me/13218880712",
+    "createdWhatsappLabel": "(321) 888-0712",
+    "alreadyHeading":       "We already sent you the guide",
+    "alreadyBody":          "We checked our records and already sent the guide to this email. If you can't find it, please check your spam or junk folder.",
+    "alreadyPhoneIntro":    "Need help? Call us at",
+    "alreadyPhone":         "+13218880712",
+    "alreadyPhoneLabel":    "(321) 888-0712"
+  }
+}

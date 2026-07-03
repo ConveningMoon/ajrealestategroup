@@ -1,5 +1,6 @@
 import { Quiz }            from '@/components/template/quiz/Quiz'
 import type { FormIntent } from '@/lib/form-contracts'
+import type { Lang }       from '@/lib/quiz-data'
 import type { LMContent }  from '@/lib/lm-content'
 
 interface QuizSectionProps {
@@ -10,9 +11,11 @@ interface QuizSectionProps {
   channelPublicId: string
   intent:          FormIntent
   quizSuccess:     LMContent['quizSuccess']
+  lang:            Lang
+  supportEmail:    string
 }
 
-export function QuizSection({ label, title, subtitle, contactHeading, channelPublicId, intent, quizSuccess }: QuizSectionProps) {
+export function QuizSection({ label, title, subtitle, contactHeading, channelPublicId, intent, quizSuccess, lang, supportEmail }: QuizSectionProps) {
   return (
     <section
       id="quiz"
@@ -47,6 +50,8 @@ export function QuizSection({ label, title, subtitle, contactHeading, channelPub
             intent={intent}
             contactHeading={contactHeading}
             quizSuccess={quizSuccess}
+            lang={lang}
+            supportEmail={supportEmail}
           />
         </div>
       </div>

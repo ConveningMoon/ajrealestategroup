@@ -1,0 +1,154 @@
+{
+  "slug": "guia-para-familias-brasileiras",
+  "channelPublicId": "chn_guiabrasileiros",
+  "intent": "compra",
+
+  "meta": {
+    "title": "Sua Primeira Casa nos Estados Unidos — Guia Gratuito para Famílias Brasileiras | Hampton Roads, VA",
+    "description": "Baixe grátis o guia completo em português para comprar sua primeira casa em Hampton Roads, Virgínia. Empréstimos ITIN, programas de ajuda da Virginia Housing e o processo passo a passo. Preparado por Viviane Chiu, engenheira civil e corretora na A&J Real Estate Group.",
+    "keywords": [
+      "comprar casa Virginia brasileiros",
+      "primeira casa Hampton Roads",
+      "empréstimo ITIN Virginia",
+      "financiamento sem green card",
+      "corretora brasileira Hampton Roads",
+      "comprar casa nos Estados Unidos",
+      "Virginia Beach",
+      "Chesapeake",
+      "Suffolk"
+    ],
+    "ogImage": "/images/og-image.jpg",
+    "locale": "pt_BR"
+  },
+
+  "hero": {
+    "badge": "Guia gratuito · Hampton Roads, Virgínia",
+    "titleLine1": "Sua Primeira Casa nos",
+    "titleLine2": "Estados Unidos",
+    "subheadline": "Se você veio para este país com o sonho de dar algo melhor à sua família, este guia é para você. O processo completo, em português, sem letras miúdas e sem surpresas.",
+    "bullets": [
+      "Como comprar mesmo sem green card ou Social Security (empréstimos ITIN)",
+      "Programas da Virgínia que cobrem parte da entrada — dinheiro que você não devolve",
+      "Quais regiões de Hampton Roads são melhores para a sua família, por escolas e segurança",
+      "Como enxergar problemas escondidos numa casa, com olhar de engenheira, e evitar erros caros"
+    ],
+    "ctaText": "Quero meu guia grátis →",
+    "microcopy": "100% grátis · Em português · Sem compromisso",
+    "images": {
+      "background": "/lm/viviane/guia-para-familias-brasileiras/LM_Viviane_Hero_Background.webp",
+      "portrait": "/lm/viviane/guia-para-familias-brasileiras/viviane_hero.webp",
+      "guideCover": "/lm/viviane/guia-para-familias-brasileiras/guide-cover.webp",
+      "guideCoverAlt": "Guia da Família Brasileira — capa"
+    }
+  },
+
+  "benefits": {
+    "label": "O que este guia contém",
+    "title": "Tudo o que ninguém te explica, agora em português e passo a passo",
+    "subtitle": "A Viviane Chiu é engenheira civil, mãe e corretora trilíngue. Ela reuniu neste guia o mesmo olhar detalhista que aplica em cada compra — com dados reais de 2026 e nada inventado — para famílias brasileiras que sonham em sair do aluguel em Hampton Roads.",
+    "cards": [
+      {
+        "icon": "CreditCard",
+        "title": "Comprar sem green card ou Social Security",
+        "desc": "Sim, é possível e é legal. Como funcionam os empréstimos ITIN na Virgínia e quais documentos você precisa para se qualificar."
+      },
+      {
+        "icon": "Gift",
+        "title": "Programas de ajuda para a entrada",
+        "desc": "A Virginia Housing oferece até cerca de US$ 10.000 de ajuda para a entrada que você não precisa devolver. Explicamos como se qualificar."
+      },
+      {
+        "icon": "Ruler",
+        "title": "Avalie a casa como uma engenheira",
+        "desc": "O olhar técnico da Viviane para enxergar rachaduras, umidade e problemas escondidos — antes de você fazer uma proposta."
+      },
+      {
+        "icon": "MapPin",
+        "title": "As melhores regiões de Hampton Roads",
+        "desc": "Virginia Beach, Chesapeake, Suffolk, Norfolk e mais — qual combina com a sua família por escolas, preço e comunidade."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "O processo completo, passo a passo",
+        "desc": "Da pré-aprovação até o dia em que você recebe as chaves, sem surpresas em nenhuma etapa."
+      },
+      {
+        "icon": "Calculator",
+        "title": "Quanto você realmente pode pagar",
+        "desc": "Entenda a parcela mensal de verdade — com impostos, seguro e todos os custos — antes de se apaixonar por um imóvel."
+      }
+    ]
+  },
+
+  "quizSection": {
+    "label": "Baixe seu guia grátis",
+    "title": "Conte um pouco sobre você e receba o guia agora",
+    "subtitle": "Leva menos de 2 minutos. Enviamos o guia na hora e, se você tiver dúvidas, a Viviane pode te acompanhar em português, sem nenhum compromisso.",
+    "contactHeading": "Para onde enviamos o seu guia?"
+  },
+
+  "agentIntro": {
+    "label": "Quem preparou este guia",
+    "name": "Viviane Chiu",
+    "title": "Corretora, engenheira civil e mãe trilíngue · A&J Real Estate Group",
+    "paragraphs": [
+      "Sou engenheira civil, mãe e falo três idiomas — português, inglês e espanhol. Ajudo famílias de todas as origens aqui em Hampton Roads a realizar o sonho da casa própria, e entendo bem o que você procura: um bairro seguro, boas escolas e um lugar onde a sua família possa criar raízes.",
+      "Minha formação em engenharia me ensinou a não confiar em achismos: eu olho os números, avalio a estrutura da casa e verifico cada detalhe antes de dizer \"pode confiar\". É esse mesmo cuidado que coloco ao lado de cada família — inclusive de quem acha que comprar não é para si, ou que não tem como comprar sem green card. Te explico tudo em português, sem pressa e sem pressão."
+    ],
+    "quote": "Como engenheira, aprendi a não confiar em achismos. Como mãe, sei o que é querer um lar seguro para os filhos. Junto os dois para cuidar da sua compra — com honestidade e no seu idioma.",
+    "photo": "/lm/viviane/guia-para-familias-brasileiras/viviane_2b.webp",
+    "whatsappUrl": "https://wa.me/17863568050",
+    "instagramUrl": "https://instagram.com/vivieyanpelomundo",
+    "instagramHandle": "@vivieyanpelomundo"
+  },
+
+  "testimonials": {
+    "label": "Famílias que já têm as suas chaves",
+    "title": "Elas também achavam que comprar era complicado",
+    "items": [
+      {
+        "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_1.webp",
+        "name": "Depoimento 1 — a preencher",
+        "location": "Cliente real da Viviane",
+        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+      },
+      {
+        "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_2.webp",
+        "name": "Depoimento 2 — a preencher",
+        "location": "Cliente real da Viviane",
+        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+      },
+      {
+        "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_3.webp",
+        "name": "Depoimento 3 — a preencher",
+        "location": "Cliente real da Viviane",
+        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+      }
+    ]
+  },
+
+  "ctaFinal": {
+    "title": "Este guia é seu, grátis, hoje.",
+    "paragraph": "Não importa se você está só começando a pesquisar ou se já está pronto para dar o passo. O guia é o primeiro passo — e o próximo é você quem dá.",
+    "ctaText": "Quero meu guia gratuito →"
+  },
+
+  "footer": {
+    "logo": "/images/logo-white_2.webp",
+    "contact": {
+      "email": "vivianechiu@gmail.com"
+    }
+  },
+
+  "quizSuccess": {
+    "createdHeading":       "Pronto! O seu guia está a caminho.",
+    "createdBody":          "Se preferir falar direto, chame a Viviane no WhatsApp:",
+    "createdWhatsappUrl":   "https://wa.me/17863568050",
+    "createdWhatsappLabel": "(786) 356-8050",
+    "alreadyHeading":       "Já enviamos o material para você",
+    "alreadyBody":          "Verificamos nossos registros e o guia já foi enviado para este e-mail. Se não encontrar, confira a caixa de spam ou lixo eletrônico.",
+    "alreadyPhoneIntro":    "Precisa de ajuda? Ligue para:",
+    "alreadyPhone":         "+17863568050",
+    "alreadyPhoneLabel":    "(786) 356-8050"
+  }
+}

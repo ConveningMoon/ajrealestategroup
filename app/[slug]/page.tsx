@@ -2,13 +2,14 @@ import { notFound }      from 'next/navigation'
 import type { Metadata } from 'next'
 import Script             from 'next/script'
 import { getLMContent, allLMSlugs } from '@/lib/lm-content'
+import { localeToLang }             from '@/lib/quiz-data'
 import { Hero }          from '@/components/template/sections/Hero'
 import { Benefits }      from '@/components/template/sections/Benefits'
 import { QuizSection }   from '@/components/template/sections/QuizSection'
 import { AgentIntro }    from '@/components/template/sections/AgentIntro'
 import { Testimonials }  from '@/components/template/sections/Testimonials'
 import { CTAFinal }      from '@/components/template/sections/CTAFinal'
-import { Footer }        from '@/components/template/sections/Footer'
+import { StickyMobileCTA } from '@/components/template/sections/StickyMobileCTA'
 
 const BASE_URL = process.env.NEXT_PUBLIC_ITMANO_BASE_URL ?? 'https://app.itmano.com'
 
@@ -52,6 +53,8 @@ export default async function LMPage({ params }: PageProps) {
   const content   = getLMContent(slug)
   if (!content) notFound()
 
+  const lang = localeToLang(content.meta.locale)
+
   return (
     <>
       <Script
@@ -67,12 +70,18 @@ export default async function LMPage({ params }: PageProps) {
           channelPublicId={content.channelPublicId}
           intent={content.intent}
           quizSuccess={content.quizSuccess}
+          lang={lang}
+          supportEmail={content.footer.contact.email}
         />
         <AgentIntro {...content.agentIntro} />
         <Testimonials {...content.testimonials} />
-        <CTAFinal {...content.ctaFinal} />
-        <Footer {...content.footer} />
+        <CTAFinal
+          {...content.ctaFinal}
+          logo={content.footer.logo}
+          lang={lang}
+        />
       </main>
+      <StickyMobileCTA ctaText={content.hero.ctaText} />
     </>
   )
 }

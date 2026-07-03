@@ -118,7 +118,7 @@ Este repo es single-tenant por ahora (solo A&J en `/`). Cuando entre el segundo 
 |---------|---------------|
 | `components/sections/AgentIntro.tsx` | Bio de Adriana, años de experiencia, familias atendidas |
 | `components/sections/Testimonials.tsx` | Testimonios reales (foto, nombre, texto, ciudad) |
-| `components/sections/Footer.tsx` | URLs reales de Instagram y Facebook |
+| `components/template/sections/CTAFinal.tsx` | Logo y link al sitio principal (cierre de página, reemplaza el antiguo footer) |
 | `public/images/ASSETS.md` | Guía de dimensiones para imágenes |
 
 ---

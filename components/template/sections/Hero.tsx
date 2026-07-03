@@ -1,13 +1,10 @@
 'use client'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
+import { scrollToQuiz } from '@/lib/scroll'
 import type { LMContent } from '@/lib/lm-content'
 
 type HeroProps = LMContent['hero']
-
-function scrollToQuiz() {
-  document.getElementById('quiz')?.scrollIntoView({ behavior: 'smooth' })
-}
 
 export function Hero({ badge, titleLine1, titleLine2, subheadline, bullets, ctaText, microcopy, images }: HeroProps) {
   const pref = useReducedMotion()
@@ -17,7 +14,7 @@ export function Hero({ badge, titleLine1, titleLine2, subheadline, bullets, ctaT
       className="bg-navy bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${images.background})` }}
     >
-      <div className="flex flex-col lg:flex-row max-w-[940px] mx-auto px-6 pt-16 lg:pt-24">
+      <div className="flex flex-col lg:flex-row max-w-[940px] mx-auto px-6 pt-10 lg:pt-10">
 
         {/* ── Text column ── */}
         <div className="flex-1 flex flex-col gap-6 justify-center">
@@ -75,7 +72,7 @@ export function Hero({ badge, titleLine1, titleLine2, subheadline, bullets, ctaT
               {ctaText}
             </button>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 pb-10">
               <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8 12L10.5 14.5L16 9" stroke="rgba(255,255,255,0.45)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M3 13V4.22L4.94 4.07C6.64 3.94 8.3 3.54 9.87 2.89L12 2l2.13.89C15.7 3.54 17.36 3.94 19.06 4.07L21 4.22V13c0 4.97-4.03 9-9 9s-9-4.03-9-9Z" stroke="rgba(255,255,255,0.45)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
@@ -86,16 +83,20 @@ export function Hero({ badge, titleLine1, titleLine2, subheadline, bullets, ctaT
         </div>
 
         {/* ── Portrait + guide cover ── */}
-        <div className="w-full lg:w-[420px]">
-          <div
-            className="relative min-h-[70vh] w-full lg:overflow-visible"
-            style={{
-              backgroundImage:    `url(${images.portrait})`,
-              backgroundSize:     'cover',
-              backgroundPosition: 'top center',
-            }}
-          >
-            <div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 mb-[-150px] lg:left-auto lg:right-0 lg:translate-x-0 lg:mr-[-200px] lg:mb-[-200px]">
+        <div className="w-full lg:w-[420px] flex items-end justify-center lg:self-end">
+          <div className="relative w-full max-w-[420px] overflow-visible">
+            {/* Full portrait — container yields to the image so nothing is cropped */}
+            <Image
+              src={images.portrait}
+              alt=""
+              width={460}
+              height={640}
+              priority
+              sizes="(max-width: 1024px) 100vw, 420px"
+              className="w-full h-auto object-contain object-bottom select-none pointer-events-none"
+            />
+
+            <div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 mb-[-200px] lg:left-auto lg:right-0 lg:translate-x-0 lg:mr-[-200px] lg:mb-[-180px]">
               <div
                 className="inline-block rounded-xl p-4"
                 style={{ background: 'radial-gradient(ellipse at center, #c7a260 0%, transparent 60%)', padding: '100px' }}

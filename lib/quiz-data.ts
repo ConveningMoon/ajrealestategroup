@@ -1,4 +1,18 @@
 // Values for fit fields must match lib/form-contracts.ts exactly.
+//
+// i18n note: only `question` and option `label` are translated (display only).
+// The option `value`s are CRM contract keys and are IDENTICAL across languages —
+// never translate them. buildFormAnswers keeps `value` canonical and sends the
+// localized `question`/`label` alongside for human-readable display in the CRM.
+
+export type Lang = 'es' | 'en' | 'pt'
+
+/** Map a content `meta.locale` (es_US | en_US | pt_BR) to a UI language. */
+export function localeToLang(locale: string): Lang {
+  if (locale.startsWith('pt')) return 'pt'
+  if (locale.startsWith('en')) return 'en'
+  return 'es'
+}
 
 export interface QuizQuestion {
   field: string
@@ -6,49 +20,74 @@ export interface QuizQuestion {
   options: Array<{ label: string; value: string }>
 }
 
-export const QUIZ_QUESTIONS: QuizQuestion[] = [
+// ── Localized question definitions ────────────────────────────────────────────
+// `value` is canonical (CRM). `question`/`label` carry one string per language.
+
+interface QuizQuestionDef {
+  field:    string
+  question: Record<Lang, string>
+  options:  Array<{ value: string; label: Record<Lang, string> }>
+}
+
+const QUIZ_DEFS: QuizQuestionDef[] = [
   // ── Fit fields (CRM match_value rules apply to these keys/values) ─────────
 
   {
     field: 'timeline',
-    question: '¿Cuándo planeas comprar tu casa?',
+    question: {
+      es: '¿Cuándo planeas comprar tu casa?',
+      en: 'When are you planning to buy your home?',
+      pt: 'Quando você planeja comprar sua casa?',
+    },
     options: [
-      { label: 'En los próximos 3 meses', value: 'under_3_months'    },
-      { label: 'En 3 a 6 meses',          value: '3_6_months'        },
-      { label: 'En 6 a 12 meses',         value: '6_12_months'       },
-      { label: 'Aún estoy explorando',    value: 'over_12_explorando' },
+      { value: 'under_3_months',    label: { es: 'En los próximos 3 meses', en: 'In the next 3 months', pt: 'Nos próximos 3 meses' } },
+      { value: '3_6_months',        label: { es: 'En 3 a 6 meses',          en: 'In 3 to 6 months',     pt: 'Em 3 a 6 meses' } },
+      { value: '6_12_months',       label: { es: 'En 6 a 12 meses',         en: 'In 6 to 12 months',    pt: 'Em 6 a 12 meses' } },
+      { value: 'over_12_explorando', label: { es: 'Aún estoy explorando',    en: 'Just exploring for now', pt: 'Ainda estou pesquisando' } },
     ],
   },
 
   {
     field: 'financing',
-    question: '¿En qué etapa estás con el financiamiento?',
+    question: {
+      es: '¿En qué etapa estás con el financiamiento?',
+      en: 'Where are you in the financing process?',
+      pt: 'Em que etapa você está no financiamento?',
+    },
     options: [
-      { label: 'Pagamos al contado (cash)',             value: 'cash'        },
-      { label: 'Ya tengo carta de pre-aprobación',     value: 'preapproved' },
-      { label: 'Estoy en proceso con un prestamista',  value: 'in_process'  },
-      { label: 'Aún no he empezado a buscarlo',        value: 'not_started' },
+      { value: 'cash',        label: { es: 'Pagamos al contado (cash)',            en: 'Paying in cash',                  pt: 'Vou pagar à vista (cash)' } },
+      { value: 'preapproved', label: { es: 'Ya tengo carta de pre-aprobación',     en: 'I already have a pre-approval',   pt: 'Já tenho carta de pré-aprovação' } },
+      { value: 'in_process',  label: { es: 'Estoy en proceso con un prestamista',  en: 'In process with a lender',        pt: 'Estou em processo com um credor' } },
+      { value: 'not_started', label: { es: 'Aún no he empezado a buscarlo',        en: "Haven't started yet",             pt: 'Ainda não comecei' } },
     ],
   },
 
   {
     // Hampton Roads market tiers: <$300k → entry, $300k–$500k → mid, >$500k → premium
     field: 'budget_tier',
-    question: '¿Cuál es tu presupuesto aproximado?',
+    question: {
+      es: '¿Cuál es tu presupuesto aproximado?',
+      en: "What's your approximate budget?",
+      pt: 'Qual é o seu orçamento aproximado?',
+    },
     options: [
-      { label: 'Hasta $300,000',             value: 'entry'     },
-      { label: '$300,000 – $500,000',        value: 'mid'       },
-      { label: 'Más de $500,000',            value: 'premium'   },
-      { label: 'Aún no lo tengo definido',   value: 'undefined' },
+      { value: 'entry',     label: { es: 'Hasta $300,000',           en: 'Up to $300,000',      pt: 'Até $300,000' } },
+      { value: 'mid',       label: { es: '$300,000 – $500,000',      en: '$300,000 – $500,000', pt: '$300,000 – $500,000' } },
+      { value: 'premium',   label: { es: 'Más de $500,000',          en: 'More than $500,000',  pt: 'Mais de $500,000' } },
+      { value: 'undefined', label: { es: 'Aún no lo tengo definido', en: 'Not defined yet',     pt: 'Ainda não defini' } },
     ],
   },
 
   {
     field: 'agent_status',
-    question: '¿Ya tienes un agente de bienes raíces?',
+    question: {
+      es: '¿Ya tienes un agente de bienes raíces?',
+      en: 'Do you already have a real estate agent?',
+      pt: 'Você já tem um corretor de imóveis?',
+    },
     options: [
-      { label: 'No, estoy buscando',  value: 'sin_agente' },
-      { label: 'Sí, ya tengo uno',    value: 'con_agente' },
+      { value: 'sin_agente', label: { es: 'No, estoy buscando', en: "No, I'm looking", pt: 'Não, estou procurando' } },
+      { value: 'con_agente', label: { es: 'Sí, ya tengo uno',   en: 'Yes, I have one', pt: 'Sim, já tenho um' } },
     ],
   },
 
@@ -56,29 +95,164 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
 
   {
     field: 'property_type',
-    question: '¿Qué tipo de propiedad buscas?',
+    question: {
+      es: '¿Qué tipo de propiedad buscas?',
+      en: 'What type of property are you looking for?',
+      pt: 'Que tipo de imóvel você procura?',
+    },
     options: [
-      { label: 'Casa unifamiliar',        value: 'single_family' },
-      { label: 'Townhouse',               value: 'townhouse'     },
-      { label: 'Condominio',              value: 'condo'         },
-      { label: 'No estoy seguro/a aún',   value: 'undecided'     },
+      { value: 'single_family', label: { es: 'Casa unifamiliar',      en: 'Single-family home', pt: 'Casa (unifamiliar)' } },
+      { value: 'townhouse',     label: { es: 'Townhouse',             en: 'Townhouse',          pt: 'Townhouse' } },
+      { value: 'condo',         label: { es: 'Condominio',            en: 'Condo',              pt: 'Condomínio (condo)' } },
+      { value: 'undecided',     label: { es: 'No estoy seguro/a aún', en: 'Not sure yet',       pt: 'Ainda não tenho certeza' } },
     ],
   },
 
   {
     field: 'area',
-    question: '¿En qué zona de Hampton Roads te interesa vivir?',
+    question: {
+      es: '¿En qué zona de Hampton Roads te interesa vivir?',
+      en: 'Which Hampton Roads area interests you?',
+      pt: 'Em qual região de Hampton Roads você quer morar?',
+    },
     options: [
-      { label: 'Virginia Beach',       value: 'virginia_beach' },
-      { label: 'Norfolk',              value: 'norfolk'        },
-      { label: 'Chesapeake',           value: 'chesapeake'     },
-      { label: 'Suffolk / otra zona',  value: 'suffolk_other'  },
+      { value: 'virginia_beach', label: { es: 'Virginia Beach',      en: 'Virginia Beach',    pt: 'Virginia Beach' } },
+      { value: 'norfolk',        label: { es: 'Norfolk',             en: 'Norfolk',           pt: 'Norfolk' } },
+      { value: 'chesapeake',     label: { es: 'Chesapeake',          en: 'Chesapeake',        pt: 'Chesapeake' } },
+      { value: 'suffolk_other',  label: { es: 'Suffolk / otra zona', en: 'Suffolk / other area', pt: 'Suffolk / outra região' } },
     ],
   },
 ]
 
-export type QuizAnswers = {
-  [K in (typeof QUIZ_QUESTIONS)[number]['field']]?: string
+/** Localized questions for a given language (values stay canonical for the CRM). */
+export function getQuizQuestions(lang: Lang): QuizQuestion[] {
+  return QUIZ_DEFS.map((d) => ({
+    field:    d.field,
+    question: d.question[lang],
+    options:  d.options.map((o) => ({ value: o.value, label: o.label[lang] })),
+  }))
+}
+
+export const QUIZ_LENGTH = QUIZ_DEFS.length
+
+export type QuizAnswers = Record<string, string | undefined>
+
+// ── UI strings (chrome around the questions) ──────────────────────────────────
+
+export const QUIZ_UI: Record<Lang, {
+  introEyebrow: string
+  introHelp:    string
+  back:         string
+  stepWord:     string
+  ofWord:       string
+  contact: {
+    firstName:      string
+    lastName:       string
+    email:          string
+    phone:          string
+    languagePref:   string
+    firstNamePh:    string
+    lastNamePh:     string
+    emailPh:        string
+    phonePh:        string
+    required:       string
+    submit:         string
+    submitting:     string
+  }
+  error: {
+    title: string
+    body:  string
+    retry: string
+  }
+}> = {
+  es: {
+    introEyebrow: 'Cuéntanos un poco...',
+    introHelp:    'Esto nos ayuda a enviarte los recursos más relevantes para ti',
+    back:         '← Atrás',
+    stepWord:     'Paso',
+    ofWord:       'de',
+    contact: {
+      firstName:    'Nombre *',
+      lastName:     'Apellido *',
+      email:        'Correo electrónico *',
+      phone:        'Teléfono *',
+      languagePref: 'Prefiero comunicarme en',
+      firstNamePh:  'Tu nombre',
+      lastNamePh:   'Tu apellido',
+      emailPh:      'tucorreo@ejemplo.com',
+      phonePh:      '(757) 000-0000',
+      required:     '* Campos obligatorios. Tu información está protegida y nunca será compartida.',
+      submit:       'Recibir mi guía gratis →',
+      submitting:   'Enviando...',
+    },
+    error: {
+      title: 'Algo salió mal',
+      body:  'No pudimos procesar tu solicitud. Intenta de nuevo o escríbenos a',
+      retry: 'Intentar de nuevo',
+    },
+  },
+  en: {
+    introEyebrow: 'Tell us a little...',
+    introHelp:    'This helps us send you the resources most relevant to you',
+    back:         '← Back',
+    stepWord:     'Step',
+    ofWord:       'of',
+    contact: {
+      firstName:    'First name *',
+      lastName:     'Last name *',
+      email:        'Email *',
+      phone:        'Phone *',
+      languagePref: 'I prefer to communicate in',
+      firstNamePh:  'Your first name',
+      lastNamePh:   'Your last name',
+      emailPh:      'you@example.com',
+      phonePh:      '(757) 000-0000',
+      required:     '* Required fields. Your information is protected and never shared.',
+      submit:       'Get my free guide →',
+      submitting:   'Sending...',
+    },
+    error: {
+      title: 'Something went wrong',
+      body:  "We couldn't process your request. Please try again or email us at",
+      retry: 'Try again',
+    },
+  },
+  pt: {
+    introEyebrow: 'Conte um pouco...',
+    introHelp:    'Isso nos ajuda a enviar os recursos mais relevantes para você',
+    back:         '← Voltar',
+    stepWord:     'Etapa',
+    ofWord:       'de',
+    contact: {
+      firstName:    'Nome *',
+      lastName:     'Sobrenome *',
+      email:        'E-mail *',
+      phone:        'Telefone *',
+      languagePref: 'Prefiro me comunicar em',
+      firstNamePh:  'Seu nome',
+      lastNamePh:   'Seu sobrenome',
+      emailPh:      'voce@exemplo.com',
+      phonePh:      '(757) 000-0000',
+      required:     '* Campos obrigatórios. Suas informações estão protegidas e nunca serão compartilhadas.',
+      submit:       'Receber meu guia grátis →',
+      submitting:   'Enviando...',
+    },
+    error: {
+      title: 'Algo deu errado',
+      body:  'Não conseguimos processar sua solicitação. Tente novamente ou escreva para',
+      retry: 'Tentar novamente',
+    },
+  },
+}
+
+// ── Closing CTA section (replaces the old footer nav/social block) ────────────
+
+export const AJ_MAIN_SITE_URL = 'https://www.ajrealestateva.com/'
+
+export const CTA_FINAL_UI: Record<Lang, { learnMore: string; designedBy: string }> = {
+  es: { learnMore: 'Conoce más de A&J Real Estate', designedBy: 'Diseñado por ITMANO' },
+  en: { learnMore: 'Learn more about A&J Real Estate', designedBy: 'Designed by ITMANO' },
+  pt: { learnMore: 'Conheça mais a A&J Real Estate', designedBy: 'Desenvolvido por ITMANO' },
 }
 
 // ── Rich answer snapshot ──────────────────────────────────────────────────────
@@ -94,8 +268,9 @@ export interface FormAnswer {
  * Converts raw quiz responses into a self-contained snapshot that the CRM
  * can store and display without needing access to the form definition.
  *
- * Reusable for any future lead-magnet or event LP:
- *   form_answers = buildFormAnswers(MY_QUESTIONS, collectedResponses)
+ * Pass the LOCALIZED questions (from getQuizQuestions(lang)) — the `value`s
+ * stay canonical for CRM scoring, while `question`/`label` are human-readable
+ * in the lead's own language.
  *
  * For free-text fields (no option list), label === value.
  */

@@ -35,9 +35,9 @@
     "ctaText": "Quiero mi guía gratis →",
     "microcopy": "100% gratis · En español · Sin compromiso",
     "images": {
-      "background": "/lm/guia-para-familias-hispanas/LM_Adriana_Hero_Background.webp",
-      "portrait": "/lm/guia-para-familias-hispanas/adriana_hero.webp",
-      "guideCover": "/lm/guia-para-familias-hispanas/guide-cover.webp",
+      "background": "/lm/adriana/guia-para-familias-hispanas/LM_Adriana_Hero_Background.webp",
+      "portrait": "/lm/adriana/guia-para-familias-hispanas/adriana_hero.webp",
+      "guideCover": "/lm/adriana/guia-para-familias-hispanas/guide-cover.webp",
       "guideCoverAlt": "Guía del Comprador Hispano — portada"
     }
   },
@@ -96,7 +96,7 @@
       "He trabajado con primerizos con presupuesto ajustado, militares en plena mudanza y familias que pensaban que comprar no era para ellos — incluyendo familias que compraron con ITIN. Te explico todo en español, sin prisa y sin presión."
     ],
     "quote": "Comprar casa cambió la vida de mi familia. Mi misión es que cambie la tuya — con honestidad, paciencia y en tu idioma.",
-    "photo": "/lm/guia-para-familias-hispanas/adriana_2b.webp",
+    "photo": "/lm/adriana/guia-para-familias-hispanas/adriana_2b.webp",
     "whatsappUrl": "https://wa.me/14077159052",
     "instagramUrl": "https://instagram.com/adrysofi_realestate",
     "instagramHandle": "@adrysofi_realestate"
@@ -107,19 +107,19 @@
     "title": "Ellos también pensaban que comprar era complicado",
     "items": [
       {
-        "image": "/lm/guia-para-familias-hispanas/testimonials/T_1.webp",
+        "image": "/lm/adriana/guia-para-familias-hispanas/testimonials/T_1.webp",
         "name": "Maduro Family",
         "location": "Virginia Beach · Casa unifamiliar",
         "quote": "Teníamos miedo de que nuestro presupuesto no alcanzara. Adriana nos explicó los programas de ayuda de Virginia y encontramos dinero para el enganche que ni sabíamos que existía. En menos de dos meses, nuestros hijos ya tenían su cuarto."
       },
       {
-        "image": "/lm/guia-para-familias-hispanas/testimonials/T_2.webp",
+        "image": "/lm/adriana/guia-para-familias-hispanas/testimonials/T_2.webp",
         "name": "Flores Family",
         "location": "North Carolina · Townhouse",
         "quote": "Lo que más nos importaba era el barrio y las escuelas. Adriana conoce Hampton Roads como nadie — nos mostró exactamente dónde buscar y por qué. Encontramos la casa con patio que queríamos, en la zona perfecta."
       },
       {
-        "image": "/lm/guia-para-familias-hispanas/testimonials/T_3.webp",
+        "image": "/lm/adriana/guia-para-familias-hispanas/testimonials/T_3.webp",
         "name": "Roberto M.",
         "location": "Virginia Beach · Townhouse",
         "quote": "Como militar, mis horarios cambian constantemente. Adriana se movió a mi ritmo, me explicó el préstamo VA paso a paso y manejó todo. Cerré sin estrés y sin sorpresas."
@@ -130,29 +130,14 @@
   "ctaFinal": {
     "title": "Esta guía es tuya, gratis, hoy.",
     "paragraph": "No importa si estás apenas explorando o listo para empezar. La guía es el primer paso — y el siguiente lo das tú.",
-    "ctaText": "Quiero mi guía gratuita →",
-    "whatsappUrl": "https://wa.me/14077159052?text=Hola%20Adriana%2C%20vi%20tu%20gu%C3%ADa%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s",
-    "whatsappLinkText": "O escríbele directamente a Adriana por WhatsApp →"
+    "ctaText": "Quiero mi guía gratuita →"
   },
 
   "footer": {
     "logo": "/images/logo-white_2.webp",
-    "nav": [
-      { "label": "Home",    "href": "https://ajrealestateva.com" },
-      { "label": "Houses",  "href": "https://ajrealestateva.com/houses" },
-      { "label": "Contact", "href": "https://ajrealestateva.com/contact" }
-    ],
-    "social": [
-      { "type": "instagram", "href": "https://instagram.com/adrysofi_realestate" },
-      { "type": "facebook",  "href": "https://facebook.com/ajrealestateva" },
-      { "type": "whatsapp",  "href": "https://wa.me/14077159052" }
-    ],
     "contact": {
-      "phone":     "(407) 715-9052",
-      "phoneHref": "tel:+14077159052",
-      "email":     "adrysofirealestate@gmail.com"
-    },
-    "legalLine": "© 2026 A&J Real Estate · Diseñado por ITMANO"
+      "email": "adrysofirealestate@gmail.com"
+    }
   },
 
   "quizSuccess": {
