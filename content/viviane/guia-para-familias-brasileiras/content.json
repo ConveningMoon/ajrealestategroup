@@ -35,7 +35,7 @@
     "ctaText": "Quero meu guia grátis →",
     "microcopy": "100% grátis · Em português · Sem compromisso",
     "images": {
-      "background": "/lm/viviane/guia-para-familias-brasileiras/LM_Viviane_Hero_Background.webp",
+      "background": "/lm/viviane/guia-para-familias-brasileiras/Viviane_Hero_Background.webp",
       "portrait": "/lm/viviane/guia-para-familias-brasileiras/viviane_hero.webp",
       "guideCover": "/lm/viviane/guia-para-familias-brasileiras/guide-cover.webp",
       "guideCoverAlt": "Guia da Família Brasileira — capa"
@@ -96,7 +96,7 @@
       "Minha formação em engenharia me ensinou a não confiar em achismos: eu olho os números, avalio a estrutura da casa e verifico cada detalhe antes de dizer \"pode confiar\". É esse mesmo cuidado que coloco ao lado de cada família — inclusive de quem acha que comprar não é para si, ou que não tem como comprar sem green card. Te explico tudo em português, sem pressa e sem pressão."
     ],
     "quote": "Como engenheira, aprendi a não confiar em achismos. Como mãe, sei o que é querer um lar seguro para os filhos. Junto os dois para cuidar da sua compra — com honestidade e no seu idioma.",
-    "photo": "/lm/viviane/guia-para-familias-brasileiras/viviane_2b.webp",
+    "photo": "/lm/viviane/guia-para-familias-brasileiras/viviane_bio.webp",
     "whatsappUrl": "https://wa.me/17863568050",
     "instagramUrl": "https://instagram.com/vivieyanpelomundo",
     "instagramHandle": "@vivieyanpelomundo"
@@ -108,21 +108,21 @@
     "items": [
       {
         "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_1.webp",
-        "name": "Depoimento 1 — a preencher",
-        "location": "Cliente real da Viviane",
-        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+        "name": "Família Andrade",
+        "location": "Virginia Beach, Virgínia",
+        "quote": "Gente, eu chorei. CHOREI. A Viviane entendeu a gente de um jeito que nem sabíamos que precisávamos — explicando tudo em português, sem pressa, sem aquela sensação de 'você não pertence aqui'. Hoje minha família tem uma casa de verdade nos EUA"
       },
       {
         "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_2.webp",
-        "name": "Depoimento 2 — a preencher",
-        "location": "Cliente real da Viviane",
-        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+        "name": "Rafael & Camila",
+        "location": "Virginia Beach, Virgínia",
+        "quote": "A Viviane não é só corretora, ela é tipo aquela prima que sabe de tudo e resolve tudo. Sendo engenheira, ela via coisas na casa que a gente nunca ia perceber sozinho. Nos salvou de comprar uma bomba, com certeza"
       },
       {
         "image": "/lm/viviane/guia-para-familias-brasileiras/testimonials/T_3.webp",
-        "name": "Depoimento 3 — a preencher",
-        "location": "Cliente real da Viviane",
-        "quote": "Espaço reservado para o depoimento verdadeiro de uma família atendida pela Viviane. Não usamos depoimentos fictícios: este campo será preenchido com a história e a foto reais, com autorização do cliente."
+        "name": "Família Ribeiro",
+        "location": "Virginia Beach, Virgínia",
+        "quote": "Chegamos há pouco tempo nos EUA e tudo dava medo, comprar casa então nem se fala. A Viviane virou nosso porto seguro. Trilíngue, paciente, e do nosso jeitinho brasileiro mesmo. Somos eternamente gratos a ela"
       }
     ]
   },
