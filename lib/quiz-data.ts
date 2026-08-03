@@ -121,18 +121,24 @@ const QUIZ_DEFS: QuizQuestionDef[] = [
   {
     field: 'area',
     question: {
-      es: '¿En qué zona de Hampton Roads te interesa vivir?',
-      en: 'Which Hampton Roads area interests you?',
-      pt: 'Em qual região de Hampton Roads você quer morar?',
+      es: '¿En qué zona te interesa vivir?',
+      en: 'Which area are you interested in?',
+      pt: 'Em qual região você quer morar?',
     },
     // La zona en palabras, no un slug: el CRM la compara contra las zonas que la
     // agencia declaro en sus ajustes ("Virginia Beach"), y 'virginia_beach' no
     // casaba con eso — geo_fit quedaba sin clasificar siempre.
+    // Estas opciones ESPEJAN las zonas declaradas por la agencia en el CRM
+    // (Ajustes -> Tu negocio). Ofrecer ciudades que la agencia no declaro no era
+    // neutral: cada una caia en "fuera de zona" y le restaba 10 puntos al lead,
+    // en un formulario disenado justamente para captarlo.
+    //
+    // Si la agencia cambia sus zonas, hay que cambiarlas aqui tambien: este
+    // proyecto vive fuera del CRM y no puede derivarlas solo.
     options: [
-      { value: 'Virginia Beach', label: { es: 'Virginia Beach',      en: 'Virginia Beach',    pt: 'Virginia Beach' } },
-      { value: 'Norfolk',        label: { es: 'Norfolk',             en: 'Norfolk',           pt: 'Norfolk' } },
-      { value: 'Chesapeake',     label: { es: 'Chesapeake',          en: 'Chesapeake',        pt: 'Chesapeake' } },
-      { value: 'Suffolk',        label: { es: 'Suffolk / otra zona', en: 'Suffolk / other area', pt: 'Suffolk / outra região' } },
+      { value: 'Virginia Beach', label: { es: 'Virginia Beach',  en: 'Virginia Beach',  pt: 'Virginia Beach' } },
+      { value: 'North Carolina', label: { es: 'North Carolina',  en: 'North Carolina',  pt: 'North Carolina' } },
+      { value: 'Otra',           label: { es: 'Otra zona',       en: 'Another area',    pt: 'Outra região' } },
     ],
   },
 ]
