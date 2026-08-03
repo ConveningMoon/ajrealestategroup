@@ -40,11 +40,31 @@ export type FinancingValue =
   | 'not_started'
 
 /**
- * key: 'budget_tier'
- * Map the market-specific price ranges of each form to one of these tiers.
- * Example (Hampton Roads): <$300k → entry, $300k–$500k → mid, >$500k → premium
+ * key: 'budget_amount' — EL MONTO, no el nivel.
+ *
+ * Manda el numero y el CRM lo clasifica contra los cortes que la agencia tiene
+ * configurados (Ajustes -> Tu negocio). Un formulario no puede saber que cuenta
+ * como "premium" para una agencia: 300.000 es de entrada en un mercado y premium
+ * en otro. Cuando el formulario bucketizaba por su cuenta, sus cortes (300k/500k)
+ * no coincidian con los de la agencia (250k/600k) y nadie se enteraba.
+ *
+ * Acepta numero o texto: '350000', '$350,000', '300000-500000' (rango -> punto
+ * medio), '350k'. Lo que no se pueda parsear deja la dimension sin determinar,
+ * que es la respuesta correcta a "no lo se".
+ *
+ * `budget_tier` con los codigos de abajo sigue funcionando por compatibilidad,
+ * pero si mandas los dos GANA el monto.
  */
 export type BudgetTierValue = 'premium' | 'mid' | 'entry' | 'undefined'
+
+/**
+ * key: 'area' — la zona EN PALABRAS ('Virginia Beach', 'Chesapeake, VA').
+ *
+ * El CRM la compara contra las zonas que la agencia declaro para decidir
+ * geo_fit (zona principal / secundaria / fuera de zona). Nada de slugs:
+ * 'virginia_beach' no casa con 'Virginia Beach'.
+ */
+export type AreaValue = string
 
 /** key: 'agent_status' */
 export type AgentStatusValue = 'sin_agente' | 'con_agente'
