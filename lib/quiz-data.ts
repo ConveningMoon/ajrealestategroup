@@ -63,18 +63,27 @@ const QUIZ_DEFS: QuizQuestionDef[] = [
   },
 
   {
-    // Hampton Roads market tiers: <$300k → entry, $300k–$500k → mid, >$500k → premium
-    field: 'budget_tier',
+    // El MONTO, no el nivel. El formulario no puede saber que es "premium" para
+    // esta agencia — antes lo decidia aqui con cortes de 300k/500k que no coinciden
+    // con los que la agencia tiene configurados en el CRM, asi que un lead de
+    // $280k salia "entry" cuando para ellos es "mid". Ahora se manda el numero y
+    // el CRM lo clasifica contra los cortes de cada agencia.
+    //
+    // Las etiquetas que ve el usuario NO cambian: cambia lo que se transmite.
+    // Rango cerrado -> punto medio; abierto -> el limite que declaro.
+    field: 'budget_amount',
     question: {
       es: '¿Cuál es tu presupuesto aproximado?',
       en: "What's your approximate budget?",
       pt: 'Qual é o seu orçamento aproximado?',
     },
     options: [
-      { value: 'entry',     label: { es: 'Hasta $300,000',           en: 'Up to $300,000',      pt: 'Até $300,000' } },
-      { value: 'mid',       label: { es: '$300,000 – $500,000',      en: '$300,000 – $500,000', pt: '$300,000 – $500,000' } },
-      { value: 'premium',   label: { es: 'Más de $500,000',          en: 'More than $500,000',  pt: 'Mais de $500,000' } },
-      { value: 'undefined', label: { es: 'Aún no lo tengo definido', en: 'Not defined yet',     pt: 'Ainda não defini' } },
+      { value: '300000',        label: { es: 'Hasta $300,000',           en: 'Up to $300,000',      pt: 'Até $300,000' } },
+      { value: '300000-500000', label: { es: '$300,000 – $500,000',      en: '$300,000 – $500,000', pt: '$300,000 – $500,000' } },
+      { value: '500000',        label: { es: 'Más de $500,000',          en: 'More than $500,000',  pt: 'Mais de $500,000' } },
+      // Sin numero parseable el CRM no deriva bucket, que es exactamente lo que
+      // significa: no lo sabemos. Equivale al viejo budget_tier 'undefined' (0 pts).
+      { value: 'sin_definir',   label: { es: 'Aún no lo tengo definido', en: 'Not defined yet',     pt: 'Ainda não defini' } },
     ],
   },
 
@@ -92,6 +101,7 @@ const QUIZ_DEFS: QuizQuestionDef[] = [
   },
 
   // ── Free fields (stored for display; no CRM scoring rules apply) ──────────
+  // (`area` ya no es libre: alimenta geo_fit via el perfil de la agencia.)
 
   {
     field: 'property_type',
@@ -115,11 +125,14 @@ const QUIZ_DEFS: QuizQuestionDef[] = [
       en: 'Which Hampton Roads area interests you?',
       pt: 'Em qual região de Hampton Roads você quer morar?',
     },
+    // La zona en palabras, no un slug: el CRM la compara contra las zonas que la
+    // agencia declaro en sus ajustes ("Virginia Beach"), y 'virginia_beach' no
+    // casaba con eso — geo_fit quedaba sin clasificar siempre.
     options: [
-      { value: 'virginia_beach', label: { es: 'Virginia Beach',      en: 'Virginia Beach',    pt: 'Virginia Beach' } },
-      { value: 'norfolk',        label: { es: 'Norfolk',             en: 'Norfolk',           pt: 'Norfolk' } },
-      { value: 'chesapeake',     label: { es: 'Chesapeake',          en: 'Chesapeake',        pt: 'Chesapeake' } },
-      { value: 'suffolk_other',  label: { es: 'Suffolk / otra zona', en: 'Suffolk / other area', pt: 'Suffolk / outra região' } },
+      { value: 'Virginia Beach', label: { es: 'Virginia Beach',      en: 'Virginia Beach',    pt: 'Virginia Beach' } },
+      { value: 'Norfolk',        label: { es: 'Norfolk',             en: 'Norfolk',           pt: 'Norfolk' } },
+      { value: 'Chesapeake',     label: { es: 'Chesapeake',          en: 'Chesapeake',        pt: 'Chesapeake' } },
+      { value: 'Suffolk',        label: { es: 'Suffolk / otra zona', en: 'Suffolk / other area', pt: 'Suffolk / outra região' } },
     ],
   },
 ]
