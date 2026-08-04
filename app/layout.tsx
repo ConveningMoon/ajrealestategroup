@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title:        'A&J Real Estate Group',
   description:  'Recursos para compradores y vendedores hispanos en Hampton Roads.',
   robots:       { index: true, follow: true },
+  icons:        { icon: '/Favicon.png' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
