@@ -58,7 +58,7 @@ export default async function LMPage({ params }: PageProps) {
   return (
     <>
       <Script
-        src={`${BASE_URL}/intake.js`}
+        src="/intake.js"
         data-channel={content.channelPublicId}
         strategy="afterInteractive"
       />
